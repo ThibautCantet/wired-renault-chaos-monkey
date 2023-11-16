@@ -1,5 +1,5 @@
 server:
-  port: 8099
+  port: 8084
 spring:
   profiles:
     active: chaos-monkey
@@ -17,7 +17,7 @@ chaos:
   monkey:
     enabled: true
     watcher:
-      restController: false
+      restController: true
       service: false
     assaults:
       latency-active: false

@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HotDealsRestController {
+public class RecommendationController {
 
-    @GetMapping("/test")
-    public List<String> test() {
-        return Arrays.asList("product1", "product2", "product3");
+    @GetMapping("/api/v1/recommendations")
+    public Recommendations recommendations() {
+        return new Recommendations(List.of("Paris", "Bruxelles", "Rome"));
     }
 
 }
